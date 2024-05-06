@@ -1,0 +1,12 @@
+CREATE TABLE usuario {
+Nome VARCHAR(50) NOT NULL,
+senha CHAR(8) NOT NULL,
+cpf CHAR(11) NOT NULL,
+email VARCHAR(50) NOT NULL,
+celular VARCHAR(14),
+genero VARCHAR(1),
+rg VARCHAR(10),
+tipoLog VARCHAR(15) NOT NULL,
+NomeLog VARCHAR(50) NOT NULL,
+estado CHAR(2)
+}
