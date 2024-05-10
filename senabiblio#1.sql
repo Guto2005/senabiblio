@@ -18,6 +18,15 @@ bairro VARCHAR(30),
 CONSTRAINT PRIMARY KEY(idUsuario)
 );
 
+ALTER TABLE Usuario
+MODIFY COLUMN genero CHAR(1) DEFAULT 'N';
+
+ALTER TABLE Usuario
+ADD CONSTRAINT CK_TipoLog CHECK (tipoLog='Praça' OR tipoLog='Rua' OR tipoLog='Avenida' OR tipoLog='Rodovia' OR tipoLog='Viela');
+
+ALTER TABLE Usuario
+ADD CONSTRAINT CK_genero CHECK (genero='F' OR genero='M' OR genero='N');
+
 SELECT * FROM Usuario
 
 CREATE TABLE ContatoTelefonico (
@@ -59,6 +68,10 @@ CTPS VARCHAR(30),
 CONSTRAINT fk_Recepcionista_Usuario FOREIGN KEY (idUsuario)
 REFERENCES Usuario(idUsuario)
 );
+
+
+ALTER TABLE recepcionista
+MODIFY COLUMN CTPS CHAR(11);
 
 SELECT * FROM Recepcionista
 
