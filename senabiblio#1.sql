@@ -151,3 +151,5 @@ CONSTRAINT fk_LivroAutor_Autor FOREIGN KEY (idAutor) REFERENCES Autor(idAutor)
 SELECT * FROM LivroAutor
 
 DROP TABLE clientes
+
+
